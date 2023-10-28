@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<form action="./template.jsp?page=../loginPro" method="post">
+	<form action="index.jsp?page=../loginPro" method="post">
 		이름: <input type="text" name="name"/><br>
 		아이디: <input type="text" name="id"/><br>
 		비밀번호: <input type="password" name="passwd"/><br>
