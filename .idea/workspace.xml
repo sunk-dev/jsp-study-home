@@ -6,11 +6,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d634e98-e0ee-444d-9a4c-b46bc35e9864" name="Changes" comment="" />
+    <list default="true" id="2d634e98-e0ee-444d-9a4c-b46bc35e9864" name="Changes" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -18,6 +23,9 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -32,7 +40,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/jskre/바탕 화면/jsp-study/demo1",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/jsp-study-home/jspWeb",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -139,6 +148,8 @@
       <workItem from="1696432621872" duration="238000" />
       <workItem from="1696811026672" duration="54000" />
       <workItem from="1696811090578" duration="26000" />
+      <workItem from="1698653581943" duration="36000" />
+      <workItem from="1698653640716" duration="11000" />
     </task>
     <servers />
   </component>

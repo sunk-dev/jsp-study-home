@@ -51,7 +51,7 @@
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
-                            <span class="hide-menu">Buttons</span>
+                            <span class="hide-menu">New Item</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
@@ -59,7 +59,7 @@
                 <span>
                   <i class="ti ti-alert-circle"></i>
                 </span>
-                            <span class="hide-menu">Alerts</span>
+                            <span class="hide-menu">BestItem</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
@@ -67,7 +67,7 @@
                 <span>
                   <i class="ti ti-cards"></i>
                 </span>
-                            <span class="hide-menu">Card</span>
+                            <span class="hide-menu">ReadLog</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
@@ -75,7 +75,7 @@
                 <span>
                   <i class="ti ti-file-description"></i>
                 </span>
-                            <span class="hide-menu">Forms</span>
+                            <span class="hide-menu">Timer</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
@@ -83,7 +83,7 @@
                 <span>
                   <i class="ti ti-typography"></i>
                 </span>
-                            <span class="hide-menu">Typography</span>
+                            <span class="hide-menu">ChatBookpt</span>
                         </a>
                     </li>
                     <li class="nav-small-cap">

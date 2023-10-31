@@ -16,6 +16,7 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="join.css">
     <style>
         #loginArea{
             width: 400px;

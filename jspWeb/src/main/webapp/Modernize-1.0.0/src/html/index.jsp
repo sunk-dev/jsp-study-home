@@ -1,4 +1,4 @@
-<%--
+        <%--
   Created by IntelliJ IDEA.
   User: jskre
   Date: 2023-10-30
@@ -6,14 +6,32 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%!
 
+    String id = null;
+    String UserWelcomeText = "로그인 해주세요!";
+    String name=null;
+
+%>
 <%--신상품 인기상품 알고리즘--%>
 <%
-    String pagefile=request.getParameter("page");
-    String DEFAULT_PATH="../../../MyHome/";
-    if(pagefile==null){
-        pagefile="newitem";
+    String pagefile = request.getParameter("page");
+    String DEFAULT_PATH = "../../../MyHome/";
+    if (pagefile == null) {
+        pagefile = "newitem";
     }
+
+
+    try {
+        id = session.getAttribute("id").toString();
+        name = session.getAttribute("name").toString();
+
+    } catch (Exception e) {
+        UserWelcomeText = "로그인 해주세요!";
+
+    }
+
+
 %>
 
 <html>
@@ -102,7 +120,17 @@
                         <span class="hide-menu">AUTH</span>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="./authentication-login.jsp" aria-expanded="false">
+                        <%
+                            if (id != null) {
+                                UserWelcomeText = name + "님 환영합니다!";
+                        %>
+                        <a id="LoginLink" class="sidebar-link"  aria-expanded="false">
+
+                        <%}else{%>
+                            <a id="LoginLink" class="sidebar-link" href="./authentication-login.jsp" aria-expanded="false">
+
+                        <%}%>
+
                 <span>
                   <i class="ti ti-login"></i>
                 </span>
@@ -110,7 +138,9 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
+
                         <a class="sidebar-link" href="../../../MyHome/jointest.jsp" aria-expanded="false">
+
                 <span>
                   <i class="ti ti-user-plus"></i>
                 </span>
@@ -216,9 +246,10 @@
 <%--                new Item Section--%>
             <div class="card overflow-hidden">
                 <div class="card-body p-4">
+                    <h5 class="card-title mb-9 fw-semibold"><%=UserWelcomeText%></h5>
                     <h5 class="card-title mb-9 fw-semibold"><%=pagefile%></h5>
                     <div class="row align-items-center">
-                        <jsp:include page='<%=DEFAULT_PATH+pagefile+".jsp"%>'/>
+                        <jsp:include page='<%=DEFAULT_PATH + pagefile + ".jsp"%>'/>
 
                     </div>
                 </div>

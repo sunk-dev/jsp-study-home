@@ -1,7 +1,11 @@
-package test;
+package beans;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -45,8 +49,27 @@ public class LoginServlet extends HttpServlet {
 		out.print("이름은 " + name + "<br>");
 		out.print("아이디는 " + id + "<br>");
 		out.print("비밀번호는 " + pass + "<br>");
-		
-	}
+
+		Connection con = null;
+		String url = "jdbc:mysql://localhost:3306/myweb";
+		String driver = "com.mysql.cj.jdbc.Driver";
+		String sql = null;
+		PreparedStatement ps = null;
+
+
+
+		try {
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, "root", "1234");
+
+		} catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

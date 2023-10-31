@@ -48,8 +48,7 @@
         p.setString(5,m.getEmail());
         int a=p.executeUpdate();
         if(a==1){
-            response.sendRedirect("");
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("D:\\jsp-study-home\\jspWeb\\src\\main\\webapp\\Modernize-1.0.0\\src\\html\\index.jsp");
 
         }
 
