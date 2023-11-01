@@ -15,7 +15,7 @@
 <jsp:useBean id="m" class="beans.Member"/>
 <jsp:setProperty name="m" property="*"/>
 <%
-  String id = request.getParameter("id");
+  String id = session.getAttribute("id").toString();
   String password = request.getParameter("password");
   Connection con = null;
   String url = "jdbc:mysql://localhost:3306/myweb";
@@ -26,18 +26,27 @@
   try {
     Class.forName(driver);
     con = DriverManager.getConnection(url, "root", "1234");
-    sql = "update member set name=?,password=?,email=?,gender=?,age=?   where id=?";
+    sql = "update member set name=?,password=?,email=?,gender=?,age=? where id=?";
     ps = con.prepareStatement(sql);
-    ps.setString(1,m.getName());
-    ps.setString(2,m.getPassword());
-    ps.setString(3,m.getEmail());
-    ps.setString(4,m.getGender());
-    ps.setInt(5,m.getAge());
+    int age = m.getAge();
+    String email = m.getEmail();
+    String name = m.getName();
+    String gender = m.getGender();
+    String password1 = m.getPassword();
+    System.out.println(m.getAge()+m.getEmail()+m.getName()+m.getGender()+m.getPassword()+id);
+    ps.setString(1,name);
+    ps.setString(2, password1);
+    ps.setString(3,email);
+    ps.setString(4,gender);
+    ps.setInt(5,age);
     ps.setString(6,id);
+
     int a = ps.executeUpdate();
+    System.out.println(sql);
+
     if(a == 1){
       session.setAttribute("name",m.getName());
-      response.sendRedirect("../webapp/Modernize-1.0.0/src/html/infoView.jsp");
+      response.sendRedirect("infoView.jsp");
       System.out.println("연결성공");
     }else {
       System.out.println("연결실패");
@@ -47,6 +56,7 @@
       throw new RuntimeException(e);
   }
 %>
+
 
 </body>
 </html>

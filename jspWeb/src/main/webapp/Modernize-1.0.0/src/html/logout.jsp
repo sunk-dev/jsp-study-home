@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.mysql.cj.Session" %><%--
   Created by IntelliJ IDEA.
   User: jskre
   Date: 2023-10-31
@@ -13,9 +13,24 @@
 <body>
 <script>
 <%--session.invalidate(); 안돌아감--%>
+
+let b = confirm("로그아웃 하시겠습니까?");
+
+if (!b) {
+    alert("로그아웃 하지 않았습니다");
+
+
+
+}else{
     <%session.invalidate();%>
-    alert("로그아웃 되었습니다.!");
-    location.href="./index.jsp";
+    alert("로그 아웃 되었습니다!");
+
+}
+location.href="./index.jsp";
+
+
+
+
 
 </script>
 

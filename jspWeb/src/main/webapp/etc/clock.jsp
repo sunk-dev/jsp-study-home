@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8" http-equiv="refresh" content="1">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link>
 </head>
 <body>
