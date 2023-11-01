@@ -28,20 +28,21 @@
         sql = "insert into member value(?,?,?,?,?,?)";
         ps = con.prepareStatement(sql);
 
-
-//        ps.setString(1, m.getId());
-//        ps.setString(2,m.getPassword());
-//        ps.setInt(3, m.getAge());
-//        ps.setString(6,m.getName());
-//        ps.setString(4,m.getGender());
-//        ps.setString(5,m.getEmail());
-
+//집  db
         ps.setString(1, m.getId());
         ps.setString(2,m.getPassword());
-        ps.setInt(4, m.getAge());
-        ps.setString(3,m.getName());
-        ps.setString(5,m.getGender());
-        ps.setString(6,m.getEmail());
+        ps.setInt(3, m.getAge());
+        ps.setString(6,m.getName());
+        ps.setString(4,m.getGender());
+        ps.setString(5,m.getEmail());
+
+//        학교 db
+//        ps.setString(1, m.getId());
+//        ps.setString(2,m.getPassword());
+//        ps.setInt(4, m.getAge());
+//        ps.setString(3,m.getName());
+//        ps.setString(5,m.getGender());
+//        ps.setString(6,m.getEmail());
 
         int a = ps.executeUpdate();
         if(a == 1){

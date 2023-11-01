@@ -6,13 +6,23 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%!
+<%
 
     String id = null;
     String UserWelcomeText = "로그인 해주세요!";
     String name=null;
 
+
+
+
 %>
+        <%
+            if(id==null){
+                UserWelcomeText = "로그인 해주세요!";
+            }else{
+                UserWelcomeText = name+"님 환영합니다!";
+            }
+        %>
 <%--신상품 인기상품 알고리즘--%>
 <%
     String pagefile = request.getParameter("page");
@@ -25,6 +35,12 @@
     try {
         id = session.getAttribute("id").toString();
         name = session.getAttribute("name").toString();
+        if(id!=null){
+            UserWelcomeText=name+"님 환영합니다!";
+
+        }else{
+            UserWelcomeText = "로그인 해주세요!";
+        }
 
     } catch (Exception e) {
         UserWelcomeText = "로그인 해주세요!";
@@ -122,13 +138,10 @@
                     <li class="sidebar-item">
                         <%
                             if (id != null) {
-                                UserWelcomeText = name + "님 환영합니다!";
                         %>
                         <a id="LoginLink" class="sidebar-link"  aria-expanded="false">
-
                         <%}else{%>
                             <a id="LoginLink" class="sidebar-link" href="./authentication-login.jsp" aria-expanded="false">
-
                         <%}%>
 
                 <span>

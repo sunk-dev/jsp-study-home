@@ -15,7 +15,7 @@
 	String name= (String) session.getAttribute("session_name");
 	if(id==null){	
 %>
-	<a href="MyHome/login.jsp">로그인</a>
+	<a href="../MyHome/login.jsp">로그인</a>
 
 <%  } 
 	else{ 
