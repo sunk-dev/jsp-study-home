@@ -32,9 +32,9 @@
         ps.setString(1, m.getId());
         ps.setString(2,m.getPassword());
         ps.setInt(3, m.getAge());
-        ps.setString(6,m.getName());
-        ps.setString(4,m.getGender());
-        ps.setString(5,m.getEmail());
+        ps.setString(4,m.getName());
+        ps.setString(5,m.getGender());
+        ps.setString(6,m.getEmail());
 
 //        학교 db
 //        ps.setString(1, m.getId());

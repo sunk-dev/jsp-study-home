@@ -6,31 +6,30 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%request.setCharacterEncoding("UTF-8");%>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
+
 <script>
 <%--session.invalidate(); 안돌아감--%>
 
-let b = confirm("로그아웃 하시겠습니까?");
+   let b = confirm("로그아웃 하시겠습니까?");
+
 
 if (!b) {
-    alert("로그아웃 하지 않았습니다");
+    <jsp:forward page='logoutCancel.jsp'/>
 
 
 
 }else{
-    <%session.invalidate();%>
-    alert("로그 아웃 되었습니다!");
+
+    <jsp:forward page='logoutSuccess.jsp'/>
+
 
 }
-location.href="./index.jsp";
-
-
-
-
 
 </script>
 
