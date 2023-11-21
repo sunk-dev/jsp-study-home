@@ -14,22 +14,24 @@
 <body>
 
 <script>
+    import alert from "bootstrap/js/src/alert";
+
+    <%
+        String id=session.getAttribute("id").toString();
+        String name=session.getAttribute("name").toString();
+
+        %>
 <%--session.invalidate(); 안돌아감--%>
 
    let b = confirm("로그아웃 하시겠습니까?");
+   // event.preventDefault();
+    <%
+    session.invalidate();
+    %>
 
 
-if (!b) {
-    <jsp:forward page='logoutCancel.jsp'/>
 
 
-
-}else{
-
-    <jsp:forward page='logoutSuccess.jsp'/>
-
-
-}
 
 </script>
 

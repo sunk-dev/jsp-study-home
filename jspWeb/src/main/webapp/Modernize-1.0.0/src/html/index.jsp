@@ -103,14 +103,23 @@
                         <a class="sidebar-link" href="./index.jsp?page=bestitem" aria-expanded="false">
                 <span>
                   <i class="ti ti-alert-circle"></i>
+
                 </span>
                             <span class="hide-menu">BestItem</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="./ui-card.jsp" aria-expanded="false">
+                    <a class="sidebar-link" href="boardWriteForm.bo" aria-expanded="false">
                 <span>
                   <i class="ti ti-cards"></i>
+                </span>
+                    <span class="hide-menu">게시글쓰기</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="boardWriteForm.bo" aria-expanded="false">
+                <span>
+                  <i class="ti ti-alert-circle"></i>
                 </span>
                             <span class="hide-menu">ReadLog</span>
                         </a>
